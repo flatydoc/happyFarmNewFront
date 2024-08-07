@@ -3,7 +3,7 @@ import WebApp from "@twa-dev/sdk";
 import { getTokenByTgInitData } from "./login.service";
 
 export const api = axios.create({
-  baseURL: `https://happyfarmclicker.shop/api/v1/test`,
+  baseURL: `https://happyfarmclicker.shop/test/api/v1/`,
   //baseURL: `http://localhost:5001/api/v1`,
   //withCredentials: true,
   headers: {
@@ -15,7 +15,7 @@ api.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
   if (token !== null) {
     const data = JSON.parse(token);
-    config.headers.Authorization = `Bearer ${data.token}`;
+    config.headers.Authorization = `Bearer ${data}`;
   }
   return config;
 });
