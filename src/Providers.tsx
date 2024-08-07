@@ -6,7 +6,7 @@ import { useAuth } from "./core/hooks/useAuth";
 import { AuthContext } from "./core/context/AuthContext";
 import { Loader } from "./pages/Loader";
 import io from "socket.io-client";
-import { QRCode } from "./QRCode";
+//import { QRCode } from "./QRCode";
 import {
   I18nextProvider,
   initReactI18next,
@@ -33,14 +33,14 @@ export const Providers = () => {
   const { isLogin, user, isLoading, token } = useAuth();
   const { i18n: LocaleConfig } = useTranslation();
 
-  const platform = WebApp.platform;
-  if (
-    platform !== "android" &&
-    platform !== "android_x" &&
-    platform !== "ios"
-  ) {
-    return <QRCode />;
-  }
+  // const platform = WebApp.platform;
+  // if (
+  //   platform !== "android" &&
+  //   platform !== "android_x" &&
+  //   platform !== "ios"
+  // ) {
+  //   return <QRCode />;
+  // }
 
   if (isLoading) {
     return <Loader />;
