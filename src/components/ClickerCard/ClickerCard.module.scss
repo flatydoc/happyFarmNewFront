@@ -1,0 +1,33 @@
+.coin {
+  animation-name: flyingAnimation;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flyingAnimation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+}
+
+@keyframes shrinkImage {
+  from {
+    width: 320px;
+  }
+  to {
+    width: 318px;
+  }
+}
+
+.shrinkAnimation {
+  animation-name: shrinkImage;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}

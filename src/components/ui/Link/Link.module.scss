@@ -1,0 +1,9 @@
+.link svg,
+.link .label {
+  color: var(--disabled);
+}
+
+.activeLink svg,
+.activeLink .label {
+  color: var(--primary);
+}

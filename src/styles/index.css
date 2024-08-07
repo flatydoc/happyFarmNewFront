@@ -1,0 +1,13 @@
+@import "./normalize.css";
+@import "./fonts.css";
+@import "./color-variables.css";
+
+html {
+  touch-action: none;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+  touch-action: none;
+}
